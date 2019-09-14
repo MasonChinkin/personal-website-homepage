@@ -1,3 +1,5 @@
+[![Codeship Status for MasonChinkin/personal-website](https://app.codeship.com/projects/f204dcd0-b4eb-0137-c530-3ed0976e4e13/status?branch=master)](https://app.codeship.com/projects/363765)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
