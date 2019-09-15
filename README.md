@@ -1,4 +1,6 @@
-[![Codeship Status for MasonChinkin/personal-website](https://app.codeship.com/projects/57fe8120-b952-0137-1cc4-5285da35f3f1/status?branch=master)](https://app.codeship.com/projects/364697)
+Master: [![Codeship Status for MasonChinkin/personal-website](https://app.codeship.com/projects/57fe8120-b952-0137-1cc4-5285da35f3f1/status?branch=master)](https://app.codeship.com/projects/364697)
+
+Develop: [![Codeship Status for MasonChinkin/personal-website](https://app.codeship.com/projects/57fe8120-b952-0137-1cc4-5285da35f3f1/status?branch=develop)](https://app.codeship.com/projects/364697)
 
 Link: [masonchinkin.com](masonchinkin.com)
 
