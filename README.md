@@ -1,12 +1,15 @@
 Master: [![Codeship Status for MasonChinkin/personal-website](https://app.codeship.com/projects/57fe8120-b952-0137-1cc4-5285da35f3f1/status?branch=master)](https://app.codeship.com/projects/364697)
 
-Develop: [![Codeship Status for MasonChinkin/personal-website](https://app.codeship.com/projects/57fe8120-b952-0137-1cc4-5285da35f3f1/status?branch=develop)](https://app.codeship.com/projects/364697)
+[masonchinkin.com](masonchinkin.com)
 
-Link: [masonchinkin.com](masonchinkin.com)
+QA: [![Codeship Status for MasonChinkin/personal-website](https://app.codeship.com/projects/57fe8120-b952-0137-1cc4-5285da35f3f1/status?branch=develop)](https://app.codeship.com/projects/364697)
+
+[qa.masonchinkin.com](qa.masonchinkin.com)
+
 
 # A Portfolio Website Using CI/CD and Monorepos
 
-My [original website](https://masonchinkin.github.io/) simply uses static github pages. I wanted to incorporate everything I've learned as a software engineer to build a professional codebase that is automatically tested and deployed.
+My [original website](https://masonchinkin.github.io/) simply uses static github pages. I wanted to incorporate everything I've learned as a software engineer to build a professional codebase that is automatically tested and deployed to qa and prod branches.
 
 ## Codebase is split up using lerna
 
