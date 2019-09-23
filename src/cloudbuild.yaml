@@ -1,0 +1,24 @@
+steps:
+
+# clone repo
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://github.com/MasonChinkin/personal-website']
+
+# npm install, build, and test
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'test']
+
+# build docker container
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/personal-website/home', '.']
+
+# push built container to container registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/personal-website/home']
+
+# tag image for search
+tags: ['personal-website', 'home']
