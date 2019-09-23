@@ -1,8 +1,8 @@
 steps:
-- id: 'npm entrypoint'
-  name: node:12.10.0
-  entrypoint: npm
-  args: ['install']
+- id: 'set node version'
+  name: 'gcr.io/cloud-builders/npm'
+  entrypoint: 'node'
+  args: ['--10.10.0']
 
 # npm install, build, and test
 - id: 'npm install'
