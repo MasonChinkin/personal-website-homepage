@@ -1,9 +1,8 @@
 steps:
-
-# clone repo
-# - id: 'clone repo'
-#   name: 'gcr.io/cloud-builders/git'
-#   args: ['clone', 'https://github.com/MasonChinkin/personal-website']
+- id: 'npm entrypoint'
+  name: node:12.10.0
+  entrypoint: npm
+  args: ['install']
 
 # npm install, build, and test
 - id: 'npm install'
