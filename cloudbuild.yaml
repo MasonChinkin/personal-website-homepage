@@ -9,7 +9,7 @@ steps:
   args: ['npm', 'run', 'build']
 - id: 'npm run test'
   name: 'node:12.10-alpine'
-  args: ['npm', 'run', 'test']
+  args: ['CI=true', 'npm', 'run', 'test']
 # - id: 'node version'
 #   name: 'node:12.10-alpine'
 
