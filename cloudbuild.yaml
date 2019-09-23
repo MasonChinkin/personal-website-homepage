@@ -1,7 +1,6 @@
 steps:
 - id: 'node version'
   name: 'node:12.10-alpine'
-  args: ['install']
 
 # npm install, build, and test
 - id: 'npm install'
