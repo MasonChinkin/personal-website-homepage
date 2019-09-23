@@ -1,9 +1,9 @@
 steps:
 
 # clone repo
-- id: 'clone repo'
-  name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://github.com/MasonChinkin/personal-website']
+# - id: 'clone repo'
+#   name: 'gcr.io/cloud-builders/git'
+#   args: ['clone', 'https://github.com/MasonChinkin/personal-website']
 
 # npm install, build, and test
 - id: 'npm install'
