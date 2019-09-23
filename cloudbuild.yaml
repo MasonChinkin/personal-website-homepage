@@ -21,11 +21,6 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/home']
 
-# restart compute engine instance with latest image 
-# - id: 'docker push'
-#   name: gcr.io/cloud-builders/gcloud
-#   args: [ compute, instance-groups, managed, rolling-action, restart, home-1]
-
 # tag image for search
 tags: ['personal-website', 'home']
 images:
