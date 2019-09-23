@@ -19,10 +19,11 @@ steps:
 # push built container to container registry
 - id: 'docker push'
   name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/personal-website']
+  args: ['push', 'gcr.io/personal-website/home']
 
 # restart compute engine instance with latest image 
-# - name: gcr.io/cloud-builders/gcloud
+# - id: 'docker push'
+#   name: gcr.io/cloud-builders/gcloud
 #   args: [ compute, instance-groups, managed, rolling-action, restart, home-1]
 
 # tag image for search
