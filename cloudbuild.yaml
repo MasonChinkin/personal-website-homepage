@@ -28,3 +28,5 @@ steps:
 
 # tag image for search
 tags: ['personal-website', 'home']
+images:
+- gcr.io/portfolio-252919/home
