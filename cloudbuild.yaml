@@ -19,7 +19,7 @@ steps:
 # push built container to container registry
 - id: 'docker push'
   name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/personal-website/home']
+  args: ['push', 'gcr.io/personal-website']
 
 # restart compute engine instance with latest image 
 # - name: gcr.io/cloud-builders/gcloud
