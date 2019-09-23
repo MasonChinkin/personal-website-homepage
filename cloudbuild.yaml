@@ -1,7 +1,7 @@
 steps:
 
 # clone repo
-- id: 'npm run test'
+- id: 'clone repo'
   name: 'gcr.io/cloud-builders/git'
   args: ['clone', 'https://github.com/MasonChinkin/personal-website']
 
