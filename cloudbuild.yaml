@@ -14,12 +14,12 @@ steps:
 # build docker container
 - id: 'docker build'
   name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/personal-website/home', '.']
+  args: ['build', '-t', 'gcr.io/portfolio-252919/home', '.']
 
 # push built container to container registry
 - id: 'docker push'
   name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/personal-website/home']
+  args: ['push', 'gcr.io/portfolio-252919/home']
 
 # restart compute engine instance with latest image 
 # - id: 'docker push'
