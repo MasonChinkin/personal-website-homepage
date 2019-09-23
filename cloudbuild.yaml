@@ -1,18 +1,14 @@
 steps:
-- id: 'set node version'
-  name: 'gcr.io/cloud-builders/npm:10.10.0'
-  entrypoint: 'node'
-  args: ['--version']
 
 # npm install, build, and test
 - id: 'npm install'
-  name: 'gcr.io/cloud-builders/npm'
+  name: 'gcr.io/cloud-builders/npm:12.10.0'
   args: ['install']
 - id: 'npm run build'
-  name: 'gcr.io/cloud-builders/npm'
+  name: 'gcr.io/cloud-builders/npm:12.10.0'
   args: ['run', 'build']
 - id: 'npm run test'
-  name: 'gcr.io/cloud-builders/npm'
+  name: 'gcr.io/cloud-builders/npm:12.10.0'
   args: ['run', 'test']
 
 # build docker container
