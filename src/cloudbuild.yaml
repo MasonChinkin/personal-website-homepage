@@ -1,24 +1,34 @@
 steps:
 
 # clone repo
-- name: 'gcr.io/cloud-builders/git'
+- id: 'npm run test'
+  name: 'gcr.io/cloud-builders/git'
   args: ['clone', 'https://github.com/MasonChinkin/personal-website']
 
 # npm install, build, and test
-- name: 'gcr.io/cloud-builders/npm'
+- id: 'npm install'
+  name: 'gcr.io/cloud-builders/npm'
   args: ['install']
-- name: 'gcr.io/cloud-builders/npm'
+- id: 'npm run build'
+  name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
-- name: 'gcr.io/cloud-builders/npm'
+- id: 'npm run test'
+  name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'test']
 
 # build docker container
-- name: 'gcr.io/cloud-builders/docker'
+- id: 'docker build'
+  name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/personal-website/home', '.']
 
 # push built container to container registry
-- name: 'gcr.io/cloud-builders/docker'
+- id: 'docker push'
+  name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/personal-website/home']
+
+# restart compute engine instance with latest image 
+# - name: gcr.io/cloud-builders/gcloud
+#   args: [ compute, instance-groups, managed, rolling-action, restart, home-1]
 
 # tag image for search
 tags: ['personal-website', 'home']
