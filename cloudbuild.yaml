@@ -1,17 +1,28 @@
 steps:
-- id: 'node version'
-  name: 'node:12.10-alpine'
 
 # npm install, build, and test
 - id: 'npm install'
-  name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
+  name: 'node:12.10-alpine'
+  args: ['npm', 'install']
 - id: 'npm run build'
-  name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build']
+  name: 'node:12.10-alpine'
+  args: ['npm', 'run', 'build']
 - id: 'npm run test'
-  name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'test']
+  name: 'node:12.10-alpine'
+  args: ['npm', 'run', 'test']
+# - id: 'node version'
+#   name: 'node:12.10-alpine'
+
+# # npm install, build, and test
+# - id: 'npm install'
+#   name: 'gcr.io/cloud-builders/npm'
+#   args: ['install']
+# - id: 'npm run build'
+#   name: 'gcr.io/cloud-builders/npm'
+#   args: ['run', 'build']
+# - id: 'npm run test'
+#   name: 'gcr.io/cloud-builders/npm'
+#   args: ['run', 'test']
 
 # build docker container
 - id: 'docker build'
