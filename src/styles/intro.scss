@@ -1,7 +1,6 @@
 .intro {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid steelblue;
 
   .intro-left {
     display: flex;
@@ -16,7 +15,6 @@
 
   .intro-right {
     padding: 1rem;
-    border-left: 1px solid steelblue;
   }
 
   h1 {

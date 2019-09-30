@@ -1,12 +1,13 @@
-@import './_reset';
-@import './constants.scss';
-@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import './intro.scss';
-@import './header.scss';
+@import "./_reset";
+@import "./constants.scss";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "./header.scss";
+@import "./intro.scss";
+@import "./projects.scss";
 
-body {
+header,
+main {
   width: 80vw;
-  max-width: 985px;
   margin: auto;
   font-family: sans-serif, roboto;
 

@@ -1,0 +1,88 @@
+.projects {
+  h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem;
+    border-bottom: 1px solid steelblue;
+
+    @include phone {
+      text-align: center;
+    }
+  }
+
+  & > * {
+    margin: 1rem 0;
+  }
+
+  .d3-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+    @include phone {
+      display: block;
+    }
+  }
+
+  .other-projects {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      margin-right: 1rem;
+    }
+  }
+
+  .card {
+    width: 16rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      bottom: 10px;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    @include phone {
+      margin: 1rem auto;
+    }
+
+    .card-body {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 0.6rem;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      line-height: 1.05rem;
+    }
+
+    .card-title {
+      margin: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    img {
+      height: 180px;
+      border-bottom: 1px solid lightgray;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    button {
+      margin-right: 1rem;
+      margin-top: 0.6rem;
+    }
+  }
+}

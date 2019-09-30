@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-const Project = props => {
+const ProjectCard = props => {
   const { img, title, description, liveLink, githubLink } = props;
 
   return (
@@ -10,17 +10,19 @@ const Project = props => {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <Button variant='primary'>
-          <a href={liveLink}>Live</a>
-        </Button>
-        {githubLink && (
-          <Button variant='secondary'>
-            <a href={githubLink}>Repo</a>
-          </Button>
-        )}
+        <div>
+          <a href={liveLink}>
+            <Button variant='primary'>Live</Button>
+          </a>
+          {githubLink && (
+            <a href={githubLink}>
+              <Button variant='secondary'>Repo</Button>
+            </a>
+          )}
+        </div>
       </Card.Body>
     </Card>
   );
 };
 
-export default Project;
+export default ProjectCard;
