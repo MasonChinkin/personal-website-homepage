@@ -1,13 +1,13 @@
 .intro {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid steelblue;
 
   .intro-left {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    border-right: 1px solid steelblue;
 
     img {
       height: 20vh;
@@ -28,10 +28,6 @@
 
   @include mobile {
     flex-direction: column;
-
-    .intro-left {
-      border: none
-    }
 
     .intro-right {
       border: none;

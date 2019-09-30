@@ -1,14 +1,14 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import Home from "./main/Home";
+import Main from "./main/Main";
 import Header from "./main/Header";
 
 const App = () => (
   <>
     {/* Header */}
     <Route path={`/`} component={Header} />
-    {/* Home Page */}
-    <Route exact path={`/`} component={Home} />
+    {/* Main Page */}
+    <Route exact path={`/`} component={Main} />
   </>
 );
 export default App;
