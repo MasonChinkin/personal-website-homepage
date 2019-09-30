@@ -1,7 +1,7 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import Home from './main/Home';
-import Header from './main/Header';
+import React from "react";
+import { Route } from "react-router-dom";
+import Home from "./main/Home";
+import Header from "./main/Header";
 
 const App = () => (
   <>
@@ -10,5 +10,5 @@ const App = () => (
     {/* Home Page */}
     <Route exact path={`/`} component={Home} />
   </>
-)
+);
 export default App;

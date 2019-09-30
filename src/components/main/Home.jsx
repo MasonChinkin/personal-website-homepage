@@ -1,24 +1,11 @@
-import React from 'react';
-import logo from '../../logo.svg';
+import React from "react";
+import Intro from "./Intro";
 
 function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This website is gonna rock
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Intro />
+    </main>
   );
 }
 

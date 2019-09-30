@@ -1,8 +1,15 @@
 header {
+  position: -webkit-sticky; // safari
+  position: sticky;
   display: flex;
+  top: 0;
+  margin-bottom: 3rem;
   justify-content: center;
   align-items: center;
-  height: 2.5rem;
+  height: 3rem;
+  box-shadow: 0 3px 4px rgba(70, 130, 180, 0.5);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 
   .home-link {
     position: absolute;
@@ -16,16 +23,18 @@ header {
   .social-links {
     display: flex;
     align-items: center;
-  }
 
-  a {
-    margin: 0 1rem;
-    padding: 0.6rem;
-    
-    &:hover {
+    a {
+      margin: 0 1rem;
+      padding: 0.6rem;
       border-radius: 0.7rem;
-      background-color: rgba(70, 130, 180, 0.3);
-      text-decoration: none;
+      background-color: white;
+      transition: 0.3s all;
+
+      &:hover {
+        background-color: rgb(196, 218, 226);
+        text-decoration: none;
+      }
     }
   }
 }

@@ -1,0 +1,41 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+
+  .intro-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-right: 1px solid steelblue;
+
+    img {
+      height: 20vh;
+    }
+  }
+
+  .intro-right {
+    padding: 1rem;
+    border-left: 1px solid steelblue;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  @include mobile {
+    flex-direction: column;
+
+    .intro-left {
+      border: none
+    }
+
+    .intro-right {
+      border: none;
+      text-align: center;
+    }
+  }
+}
