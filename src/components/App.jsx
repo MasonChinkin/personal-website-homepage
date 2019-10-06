@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import Main from "./main/Main";
-import Header from "./main/Header";
+import Header from "./header/Header";
 
 const App = () => (
   <>

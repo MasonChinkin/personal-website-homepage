@@ -1,17 +1,10 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { d3Projects, otherProjects } from "./projectList";
+import imageLoader from '../../../util/imageLoader';
 
 const Projects = () => {
-  const importAll = r => {
-    let images = {};
-    r.keys().map(item => (images[item.replace("./", "")] = r(item)));
-    return images;
-  };
-
-  const images = importAll(
-    require.context("../../../assets/images", false, /\.(png|jpe?g|svg)$/)
-  );
+  const images = imageLoader();
 
   const otherCards = Object.values(otherProjects).map((project, i) => {
     return (
