@@ -17,11 +17,6 @@ steps:
     name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/portfolio-252919/home', '.']
 
-  # push built container to container registry
-  # - id: 'docker push'
-  #   name: 'gcr.io/cloud-builders/docker'
-  #   args: ['push', 'gcr.io/portfolio-252919/home']
-
 # tag image for search
 tags: ['personal-website', 'home']
 images:

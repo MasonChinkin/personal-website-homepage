@@ -10,7 +10,7 @@ const Intro = () => {
         <Image alt='picture of Mason Chinkin' src={avatar} roundedCircle />
       </div>
       <div className='intro-right'>
-        <h1>Mason Chinkin</h1>
+        <h1>Mason Chinkin is a boss</h1>
         <p>
           {copyText.myStory}
           <br />
