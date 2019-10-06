@@ -3,20 +3,20 @@ import ProjectCard from "./ProjectCard";
 import { d3Projects, otherProjects } from "./projectList";
 
 const Projects = () => {
-  // const importAll = r => {
-  //   let images = {};
-  //   r.keys().map(item => (images[item.replace("./", "")] = r(item)));
-  //   return images;
-  // };
+  const importAll = r => {
+    let images = {};
+    r.keys().map(item => (images[item.replace("./", "")] = r(item)));
+    return images;
+  };
 
-  // const images = importAll(
-  //   require.context("../../../assets/images", false, /\.(png|jpe?g|svg)$/)
-  // );
+  const images = importAll(
+    require.context("../../../assets/images", false, /\.(png|jpe?g|svg)$/)
+  );
 
   const otherCards = Object.values(otherProjects).map((project, i) => {
     return (
       <ProjectCard
-        img={'https://www.placecage.com/c/460/300'}
+        img={images[project.img]}
         title={project.title}
         description={project.description}
         liveLink={project.liveLink}
@@ -29,7 +29,7 @@ const Projects = () => {
   const d3Cards = Object.values(d3Projects).map((project, i) => {
     return (
       <ProjectCard
-        img={'https://www.placecage.com/c/460/300'}
+        img={images[project.img]}
         title={project.title}
         description={project.description}
         liveLink={project.liveLink}
