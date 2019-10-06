@@ -25,4 +25,4 @@ steps:
   # push built container to container registry
   - id: 'Deploy to GCE instance'
     name: gcr.io/cloud-builders/gcloud
-    args: [ 'compute', 'instances', 'reset', 'home-1', --zone=us-central1 ]
+    args: [ 'compute', 'instances', 'reset', 'home-1', --zone=us-central1-a ]
