@@ -1,22 +1,24 @@
 .projects {
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     padding: 1rem;
     border-bottom: 1px solid steelblue;
+    margin: 1rem 0 0;
 
     @include phone {
       text-align: center;
     }
   }
 
-  & > * {
-    margin: 1rem 0;
+  & > ul {
+    margin: 2rem 0 0;
   }
 
   .d3-projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    justify-items: center;
 
     @include phone {
       display: block;
@@ -34,7 +36,7 @@
 
   .card {
     width: 16rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     bottom: 0;
     position: relative;
@@ -59,11 +61,13 @@
     .card-text {
       font-size: 0.95rem;
       line-height: 1.05rem;
+      pointer-events: none;
     }
 
     .card-title {
       margin: 0;
       margin-bottom: 0.5rem;
+      pointer-events: none;
     }
 
     img {
