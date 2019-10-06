@@ -21,8 +21,3 @@ steps:
   - id: 'docker push'
     name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/home']
-
-# tag image for search
-# tags: ['personal-website', 'home']
-# images:
-#   - gcr.io/$PROJECT_ID/home
