@@ -1,4 +1,5 @@
 const express = require('express');
+const proxy = require('http-proxy-middleware');
 const path = require('path');
 
 // App
@@ -6,9 +7,15 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/ping', (req, res) => {
-  console.log('ROUTE: /ping');
   return res.send('pong');
 });
+
+const proxyOptions = {
+  target: 'reactapp:8081', // target host
+  changeOrigin: true, // needed for virtual hosted sites
+}
+
+app.use('/react-app', proxy(proxyOptions));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
@@ -16,4 +23,4 @@ app.get('/', (req, res) => {
 
 const PORT = 80;
 app.listen(PORT);
-console.log(`Running on port ${PORT}`);
+console.log(`Listening on port ${PORT}`);
