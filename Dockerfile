@@ -5,5 +5,5 @@ COPY package.json yarn.lock ./
 RUN npm install
 COPY . ./
 RUN npm run build
-EXPOSE 8000
+EXPOSE 8010
 CMD [ "node", "server.js" ]

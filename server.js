@@ -13,6 +13,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-const PORT = 8000;
+const PORT = 8010;
 app.listen(PORT);
 console.log(`Listening on port ${PORT}`);
