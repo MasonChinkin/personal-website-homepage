@@ -1,4 +1,4 @@
-import { FC, FunctionComponent } from 'react'
+import { FC } from 'react'
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
 import ReactCSSTransitionReplace from 'react-css-transition-replace'
 import { Location } from 'history'
@@ -16,7 +16,7 @@ type AppProps = {
 const App: FC<AppProps> = ({ location }) => {
   type route = {
     path: string
-    component: FunctionComponent
+    component: FC
   }
 
   const routes: route[] = [
