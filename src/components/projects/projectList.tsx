@@ -50,14 +50,6 @@ export const d3Projects: projectType[] = [
     liveLink: 'https://masonchinkin.github.io/2016_Congressional_Election_Map/',
   },
   {
-    img: 'images/bars.jpg',
-    title: 'The Useless Swiss-Army Bar Chart',
-    description:
-      'Ongoing project to add as many useless functions to a bar chart as possible.',
-    liveLink:
-      'https://masonchinkin.github.io/swiss-army-bar-chart.html#portfolio',
-  },
-  {
     img: 'images/gdp.png',
     title: 'Interactive Breakdown of US GDP Growth',
     description: 'The first thing I made after learning the basics of d3.js.',
