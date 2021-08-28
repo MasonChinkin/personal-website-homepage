@@ -3,7 +3,6 @@ WORKDIR /usr/src/app
 
 COPY package.json ./
 
-RUN apk add g++ make python
 RUN npm install --legacy-peer-deps
 
 COPY . ./
