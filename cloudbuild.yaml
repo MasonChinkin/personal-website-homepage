@@ -1,14 +1,14 @@
 steps:
   - id: 'npm install'
-    name: 'node:15.11.0-alpine'
+    name: 'node:16.8.0-alpine'
     args: ['npm', 'install', '--legacy-peer-deps']
 
   - id: 'npm run build'
-    name: 'node:15.11.0-alpine'
+    name: 'node:16.8.0-alpine'
     args: ['npm', 'run', 'build']
 
   - id: 'npm run test'
-    name: 'node:15.11.0-alpine'
+    name: 'node:16.8.0-alpine'
     args: ['npm', 'run', 'test']
 
   - id: 'docker build'
