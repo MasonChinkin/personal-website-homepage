@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^4.6.0",
     "classnames": "^2.2.6",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "sass": "^1.38.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.1",
