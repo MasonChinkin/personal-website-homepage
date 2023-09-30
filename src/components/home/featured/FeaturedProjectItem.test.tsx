@@ -1,11 +1,12 @@
-import ReactDom from 'react-dom'
 import FeaturedProjectItem from './FeaturedProjectItem'
 import { d3Projects } from '../../projects/projectList'
+import { createRoot } from 'react-dom/client'
 
 const project = d3Projects[0]
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDom.render(<FeaturedProjectItem project={project} />, div)
-  ReactDom.unmountComponentAtNode(div)
+  const root = createRoot(div)
+  root.render(<FeaturedProjectItem project={project} />)
+  root.unmount()
 })

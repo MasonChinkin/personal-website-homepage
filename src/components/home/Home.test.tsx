@@ -1,8 +1,9 @@
-import ReactDom from 'react-dom'
 import Home from './Home'
+import { createRoot } from 'react-dom/client'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDom.render(<Home />, div)
-  ReactDom.unmountComponentAtNode(div)
+  const root = createRoot(div)
+  root.render(<Home />)
+  root.unmount()
 })

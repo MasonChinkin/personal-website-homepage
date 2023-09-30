@@ -1,15 +1,17 @@
-import ReactDom from 'react-dom'
 import D3ProjectGrid from './D3ProjectGrid'
 import OtherProjectGrid from './OtherProjectGrid'
+import { createRoot } from 'react-dom/client'
 
 it('D3ProjectGrid renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDom.render(<D3ProjectGrid />, div)
-  ReactDom.unmountComponentAtNode(div)
+  const root = createRoot(div)
+  root.render(<D3ProjectGrid />)
+  root.unmount()
 })
 
 it('OtherProjectGrid renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDom.render(<OtherProjectGrid />, div)
-  ReactDom.unmountComponentAtNode(div)
+  const root = createRoot(div)
+  root.render(<OtherProjectGrid />)
+  root.unmount()
 })

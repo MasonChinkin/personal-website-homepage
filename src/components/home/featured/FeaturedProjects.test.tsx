@@ -1,8 +1,9 @@
-import ReactDom from 'react-dom'
 import FeaturedProjects from './FeaturedProjects'
+import { createRoot } from 'react-dom/client'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDom.render(<FeaturedProjects />, div)
-  ReactDom.unmountComponentAtNode(div)
+  const root = createRoot(div)
+  root.render(<FeaturedProjects />)
+  root.unmount()
 })
