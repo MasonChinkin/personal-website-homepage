@@ -10,7 +10,7 @@ interface ResponseWithString extends Response {
 
 // testing route
 app.get('/ping', (req: Request, res: ResponseWithString): void => {
-  res.send('pong')
+  res.send('pong - Im using react 18!')
 })
 
 // incorrect routes are redirected to '/' by react-router in ./App.tsx

@@ -15,7 +15,8 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "react-scripts": "^5.0.0",
-    "sass": "^1.68.0",
+    "sass": "1.38.2",
+    "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "scripts": {
@@ -23,7 +24,7 @@
     "build": "react-scripts build",
     "test": "CI=true react-scripts test",
     "eject": "react-scripts eject",
-    "server:compile": "tsc --esModuleInterop server.ts",
+    "server": "ts-node server.ts",
     "format:fix": "prettier --write ."
   },
   "eslintConfig": {

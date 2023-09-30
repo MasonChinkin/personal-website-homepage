@@ -1,16 +1,15 @@
-FROM node:16.17.0-alpine
+FROM node:18.18.0.0-alpine
 WORKDIR /usr/src/app
 
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm install --legacy-peer-deps
+RUN npm install --force
 
 COPY . ./
 
 RUN npm run build
-RUN npm run server:compile
 
 EXPOSE 8010
 
-CMD [ "node", "server.js" ]
+RUN npm run server
