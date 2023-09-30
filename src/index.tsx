@@ -1,5 +1,8 @@
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import './styles/index.scss'
 import Root from './Root'
 
-ReactDOM.render(<Root />, document.getElementById('root'))
+const domNode = document.getElementById('root')!
+const root = createRoot(domNode)
+
+root.render(<Root />)

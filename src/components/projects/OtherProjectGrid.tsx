@@ -1,9 +1,8 @@
-import { FC } from 'react'
 import ProjectGridItem from './ProjectGridItem'
 import { otherProjects } from './projectList'
 import classNames from 'classnames'
 
-const OtherProjectGrid: FC = () => {
+const OtherProjectGrid = () => {
   const cards: JSX.Element[] = otherProjects.map(
     (project, i: number): JSX.Element => {
       return <ProjectGridItem project={project} key={i} />

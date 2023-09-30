@@ -1,7 +1,7 @@
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import classNames from 'classnames'
 
-const Intro: FC = () => {
+const Intro = () => {
   const [imgLoaded, setImgLoaded] = useState<Boolean>(false)
 
   const imgClasses = classNames('avatar-img', {

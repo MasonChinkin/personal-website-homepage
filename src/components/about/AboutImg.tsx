@@ -1,7 +1,7 @@
-import { useState, FC } from 'react'
+import { useState } from 'react'
 import classNames from 'classnames'
 
-const AboutImg: FC = () => {
+const AboutImg = () => {
   const [imgLoaded, setImgLoaded] = useState<boolean>(false)
   const isPhone: boolean = window.innerWidth <= 450
 

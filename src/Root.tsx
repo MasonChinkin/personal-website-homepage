@@ -1,8 +1,7 @@
-import { FC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import App from './components/App'
 
-const Root: FC = () => (
+const Root = () => (
   <BrowserRouter>
     <App />
   </BrowserRouter>

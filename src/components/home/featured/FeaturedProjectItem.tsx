@@ -1,4 +1,4 @@
-import { useState, FC } from 'react'
+import { useState } from 'react'
 import classNames from 'classnames'
 import { projectType } from '../../projects/projectList'
 
@@ -6,7 +6,7 @@ type FeaturedProjectItemProps = {
   project: projectType
 }
 
-const FeaturedProjectItem: FC<FeaturedProjectItemProps> = ({ project }) => {
+const FeaturedProjectItem = ({ project }: FeaturedProjectItemProps) => {
   const { img, gif, title, description, liveLink } = project
   const [imgLoaded, setImgLoaded] = useState<boolean>(false)
   const isPhone: boolean = window.innerWidth <= 450

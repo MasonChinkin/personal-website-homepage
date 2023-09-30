@@ -1,6 +1,4 @@
-import { FC } from 'react'
-
-const DesktopContact: FC = () => {
+const DesktopContact = () => {
   const email = 'mason.chinkin@gmail.com'
   const subject = 'Hi Mason'
   const body = "I would like to hire you and pay you lots o' money!"

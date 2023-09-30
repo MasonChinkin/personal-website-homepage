@@ -1,6 +1,4 @@
-import { FC } from 'react'
-
-const Background: FC = () => {
+const Background = () => {
   return (
     <>
       <div className="stars"></div>

@@ -1,4 +1,4 @@
-import { useState, FC } from 'react'
+import { useState } from 'react'
 import { Card, Button } from 'react-bootstrap'
 import classNames from 'classnames'
 import { projectType } from './projectList'
@@ -7,7 +7,7 @@ type ProjectGridItemProps = {
   project: projectType
 }
 
-const ProjectGridItem: FC<ProjectGridItemProps> = ({ project }) => {
+const ProjectGridItem = ({ project }: ProjectGridItemProps) => {
   const { img, title, description, liveLink, githubLink } = project
   const [imgLoaded, setImgLoaded] = useState<boolean>(false)
 

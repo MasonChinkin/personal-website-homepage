@@ -1,7 +1,6 @@
-import { FC } from 'react'
 import AboutImg from './AboutImg'
 
-const About: FC = () => (
+const About = () => (
   <div className="height-transition-wrapper">
     <main className="about frosted">
       <section className="about-me">

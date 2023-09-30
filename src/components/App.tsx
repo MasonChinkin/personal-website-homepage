@@ -1,7 +1,5 @@
-import { FC } from 'react'
-import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import ReactCSSTransitionReplace from 'react-css-transition-replace'
-import { Location } from 'history'
 import Header from './header/Header'
 import Background from './Background'
 import Home from './home/Home'
@@ -9,29 +7,20 @@ import D3ProjectGrid from './projects/D3ProjectGrid'
 import OtherProjectGrid from './projects/OtherProjectGrid'
 import About from './about/About'
 
-type AppProps = {
-  location: Location
+type route = {
+  path: string
+  element: JSX.Element
 }
 
-const App: FC<AppProps> = ({ location }) => {
-  type route = {
-    path: string
-    component: FC
-  }
-
+const App = () => {
   const routes: route[] = [
-    { path: '/', component: Home },
-    { path: '/about', component: About },
-    { path: '/d3', component: D3ProjectGrid },
-    { path: '/other', component: OtherProjectGrid },
+    { path: '/', element: <Home /> },
+    { path: '/about', element: <About /> },
+    { path: '/d3', element: <D3ProjectGrid /> },
+    { path: '/other', element: <OtherProjectGrid /> },
   ]
 
-  const renderRoutes: JSX.Element[] = routes.map(
-    (route: route, i: number): JSX.Element => (
-      <Route exact path={route.path} key={i} component={route.component} />
-    )
-  )
-
+  const location = useLocation()
   const transitionDuration: number = 500 // matching value in base.scss
 
   return (
@@ -39,20 +28,23 @@ const App: FC<AppProps> = ({ location }) => {
       <Background />
       <Header />
 
+      {/* @ts-expect-error async component throws type error */}
       <ReactCSSTransitionReplace
+        // @ts-expect-error async component throws type error
         transitionName="fade-wait"
         transitionEnterTimeout={transitionDuration}
         transitionLeaveTimeout={transitionDuration}
       >
         <div key={location.pathname}>
-          <Switch location={location}>
-            {renderRoutes}
-            <Redirect to="/" />
-          </Switch>
+          <Routes location={location}>
+            {routes.map((route, i) => (
+              <Route key={i} path={route.path} element={route.element} />
+            ))}
+          </Routes>
         </div>
       </ReactCSSTransitionReplace>
     </>
   )
 }
 
-export default withRouter(App)
+export default App

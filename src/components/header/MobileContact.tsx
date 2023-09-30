@@ -1,7 +1,7 @@
-import { useState, FC } from 'react'
+import { useState } from 'react'
 import { Modal, Button } from 'react-bootstrap'
 
-const MobileContact: FC = () => {
+const MobileContact = () => {
   const [open, setOpen] = useState<boolean>(false)
 
   const email = 'mason.chinkin@gmail.com'
